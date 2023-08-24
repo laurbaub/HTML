@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <link rel="stylesheet" href="./css/frmcontactos.css">
+</head>
+<body>
+    <header>
+        <img src="./imagenes/incap.png" alt=""width="100" height="100">
+        <h1>FORMULARIO INCAP</h1>
+    </header>
+    <nav>
+        <p>Este formulario es para registrar el ingreso de un estudiante</p>
+    </nav>
+    <section>
+        <form action="">
+            <fieldset>
+                <label for="">Nombre Completo</label>
+                <input type="text" placeholder="Ingrese su nombre y apellido" autofocus required> <br><br>
+                <label for="">Email:</label>
+                <input type="email" placeholder="ingrese su correo" required> <br><br>
+                <label for="">Contraseña:</label>
+                <input type="password" placeholder="ingrese su contraseña" required> <br><br>
+                <label for="">Seleccione tus Hobbies: </label> <br><br>
+                <input type="checkbox">Cine
+                <input type="checkbox">Lectura
+                <input type="checkbox">Deporte
+                <br><br>
+                <label for="">Estado Civil</label><br><br>
+                <input type="radio" name="estadocivil"  value="solter">Soltero(a) 
+                <input type="radio" name="estadocivil"  value="Casado">Casado(a)
+                <input type="radio" name="estadocivil"  value="Viudo">Viudo(a) <br><br>
+                <!-- seccion de control de lista de opciones -->
+                <label for="">Programas Tecnicos Incap</label>
+                <select name="" id="">
+                    <option value="">Seleccione programa..</option><br>
+                    <option value="">Sistemas</option><br>
+                    <option value="">Diseño graafico</option><br>
+                    <option value="">Contabilidad</option><br>
+                </select>
+                <br><br>
+                <label for="">Fecha de Nacimiento:</label>
+                <input type="date">
+                <br><br>
+                <label for="">Coloque su edad:</label><br>
+                <input type="number">
+                <br><br>
+                <label for="">Subir foto- archivo</label>
+                <input type="file">
+                <br><br>
+                <label for="">Comentarios:</label><br>
+                <textarea name="" id="" cols="40" rows="5"></textarea>             
+            </fieldset>
+            <br><br>
+            <button type="submit">ENVIAR</button>
+            <button type="reset">CANCELAR</button>
+            <br><br>
+        </form>
+    </section>
+    <footer>
+        <cite>Derechos Reservados &copy;2023@ LaurBauB</cite>
+    </footer>
+
+</body>
+</html>
