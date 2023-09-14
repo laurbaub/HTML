@@ -1,0 +1,211 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    max-width: 100%;
+}
+body{
+    font-family: Tahoma;
+    font-size: 18px;
+    background-image: url(../imagenes/incap\ se\ invencible2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#header{
+    background-color: lightpink;
+    border: 2px solid blue;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-area: header;/*nombre para CSS GRID*/
+}
+#menu{
+    grid-area: nav;/*nombre para CSS GRID*/
+    background-color: blue;
+    border: 2px solid yellowgreen;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+ul{
+    padding: 0;
+    margin: 0 1px;
+}
+li{
+    display: inline;
+    list-style: none;
+    margin: 0 5px;
+    font: bold 12px verdana;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+#buscarbox input{
+    height: 25px;
+    width: 0px;
+    padding: 0;
+    border: 0px;
+    border-radius: 40px;
+    padding-right: 50px;
+    transition: 0.8s ease;
+}
+#buscarbox input:hover{
+    width: 150px;
+    padding-left: 10px;
+    outline: none;
+}
+#main{
+    grid-area: main;/*nombre para CSS GRID*/
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(5px);/*Efecto Glass*/
+    border: 2px solid yellowgreen;
+    max-width: 100%;
+    height: auto;
+}
+figure{
+    display: inline;
+    margin: 45px;
+    padding: 5px;
+}
+.programa{
+    display: inline-block;
+    margin:5px;
+    padding: 5px;
+    width: 45%;
+    height: 200px;
+    position: relative;
+    border: 1px solid blue;
+    border-radius: 15px;
+}
+section article{
+    margin: 20px;
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(5px);/*Efecto Glass*/
+}
+#sidebar{
+    grid-area: sibebar;/*nombre para CSS GRID*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(5px);/*Efecto Glass*/
+}
+iframe{
+    max-width: 100%;
+    height: auto;
+}
+#footer{
+    grid-area: footer;/*nombre para CSS GRID*/
+    padding-top: 20px;
+    border: 2px solid yellowgreen;
+    border-radius: 20px;
+    clear: both;
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(5px);/*Efecto Glass*/
+}
+#redes a{
+    padding: 5px;
+    margin: 0;
+}
+#redes a i:hover{
+    transform: scale(1.5);/*animacion de aumento tamaño*/
+}
+i[class^="fa"]{ /*color a iconos fontawesome*/
+    color: grey;
+    font-size: 20px;
+    border: 1px solid transparent;
+}
+/* SECCION CSS GRID DISEÑO WEB REPOINB */
+/* VISTA PC 3 COLUMNAS */
+#grid-container > * {
+    text-align: center;
+}
+#grid-container{
+    display: grid;
+    grid-gap: 10px;
+    grid-template: 
+    "header header header" 150px
+    "nav nav nav" 150px
+    "main main sidebar" 300px
+    "main main sidebar" 300px
+    "main main sidebar" 250px
+    "footer footer footer" 150px /
+    1200px 150px 300px; 
+}
+/* VISTA TABLETS 2 COLUMNAS */
+@media (max-width:1024px){
+    #grid-container{        
+        grid-template:
+        "header header" 170px
+        "nav main" 800px
+        "nav main" 700px
+        "sidebar sidebar" 650px
+        "footer footer" 100px /
+        250px 450;
+        font-size: 75%; 
+}
+#menu{
+    background-color: blue;
+    border-radius: 22px;
+    display: block;
+    padding: 45px;
+    margin:40px;
+    height: auto;
+    text-align: center;
+}
+#main{
+display: flex;
+flex-direction: column;/* cambia la forma de direccion de fila a col*/
+justify-content: space-between;
+align-items:center;
+flex-wrap: wrap;/*se define el auto ajuste de ancho dispostivo pasa a sgte. linea*/
+max-width:100%;
+   
+}
+.programa{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items:center;
+flex-wrap: wrap;
+max-width: 100%;
+height: auto;
+border: 1px solid black; 
+
+}
+iframe{
+max-width: 100%;
+height: auto;
+}
+#buscarbox{
+display:block;
+padding: 5px;
+}
+#buscarbox{
+    display: block;
+    padding: 5px;
+}
+}
+/* vista celulaR */
+@media (max-width:640px){
+#grid-container{
+    grid-template: 
+     "header" 150px
+     "nav" 50px
+     "main" 1120px
+     "sidebar" 800px
+     "footer" 100px /
+      500px; 
+      font-size: 60%;
+    }
+}
