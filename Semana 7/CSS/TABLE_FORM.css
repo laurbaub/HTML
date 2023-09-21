@@ -1,0 +1,30 @@
+body{
+    background: radial-gradient(teal,purple);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+body h1{
+    font-family: Comic sans ms;
+    text-align: center;
+    color: white;
+}
+form table{
+    width: 60%;
+    margin: 2px auto;
+}
+form table caption{
+    font-size: 22px;
+    color: aqua;
+    padding: 20px;    
+}
+form table th, td{
+    width: 25%;
+    text-align: left;
+    vertical-align: top;
+    border: 2px solid darkblue;
+    padding: 3px;
+}
+input{
+    background-color: lightcoral;
+}
